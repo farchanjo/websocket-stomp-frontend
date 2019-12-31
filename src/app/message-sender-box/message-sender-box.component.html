@@ -1,0 +1,11 @@
+<div fxLayout="row" fxFlex="100">
+  <form fxFlex fxLayoutAlign="center center" (submit)="sendEvent($event)" [formGroup]="sendMessageForm">
+    <mat-form-field fxFlex="100">
+      <label>
+        <input type="text" matInput name="textToSend" formControlName="textToSend"  placeholder="Send your Message"/>
+      </label>
+    </mat-form-field>
+    <button mat-button>Send</button>
+  </form>
+</div>
+

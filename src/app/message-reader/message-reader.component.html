@@ -1,0 +1,15 @@
+<div fxLayout="column" class="border-black" fxLayoutAlign="start start" fxFlex="100">
+  <div fxLayout="row" class="border-black width-100" fxLayoutAlign="start">
+    <p class="margin-left-10px">Logged: {{user?.name}}</p>
+    <p class="margin-left-10px"> - </p>
+    <p class="margin-left-10px">Messages: {{messages.length}}</p>
+  </div>
+  <div #chatHistory fxLayout="column" class="chat-history width-100 padding-10px" fxLayoutAlign="start">
+    <div *ngFor="let message of messages" class="message-box" [ngClass]="{'private': message.isPrivate}">
+      <a href="#" *ngIf="user.sub !== message.subject" (click)="setDestination(message)">{{message.sender}}
+        <span *ngIf="message.destinationName"> - {{message.destinationName}}</span></a>
+      <span *ngIf="user.sub === message.subject">{{message.sender}}</span> ({{message.clientDate| date:'HH:mm:ss'}})
+      - {{message.message}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div fxLayout="column" class="margin-left-10px">
+  <div fxLayout="column" class="margin-left-10px">
+    <p>Destination: <a href="#" (click)="removeSelectedByEvent(userSelected)">{{userSelected?.name}}</a></p>
+  </div>
+  <div fxLayout="column" class="margin-left-10px">
+    <p *ngFor="let user of users"><a href="#" (click)="setDestinationByEvent(user)">{{user?.name}}</a></p>
+  </div>
+</div>
