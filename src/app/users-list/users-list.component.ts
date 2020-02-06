@@ -22,6 +22,7 @@ export class UsersListComponent implements OnInit, OnDestroy {
   public total = 0;
   public userSelected: UserDTO = null;
   private destinations: Subscription;
+  private teste: string[];
 
   constructor(private logger: NGXLogger,
               private socketEventSubjectsService: SocketEventSubjectsService<SocketEventDTO>,

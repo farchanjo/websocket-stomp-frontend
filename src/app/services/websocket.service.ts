@@ -3,7 +3,6 @@ import * as SockJS from 'sockjs-client';
 import {environment} from '../../environments/environment';
 import {Injectable} from '@angular/core';
 import {NGXLogger} from 'ngx-logger';
-import {Serializer} from "@angular/compiler";
 
 @Injectable({
   providedIn: 'root',

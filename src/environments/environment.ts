@@ -5,7 +5,7 @@
 import {NgxLoggerLevel} from 'ngx-logger';
 
 export const environment = {
-  ws: 'http://localhost:4200/socket/ws',
+  ws: 'http://terra.fabricio.local:4200/socket/ws',
   log: {level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.DEBUG},
   debugSocket: false,
   maxMessages: 1200,
